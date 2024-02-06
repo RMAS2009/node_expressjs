@@ -7,7 +7,8 @@ const multer = require('multer');
 const path = require('path');
 
 
-const folder="./uploads/";
+
+const folder="./images/";
 const storage=multer.diskStorage({
     destination:(req,file,cb)=>{
         cb(null,folder);
@@ -31,6 +32,6 @@ app.post('/',upload.single('mukit'),(req,res)=>{
     res.send('File upload succeed');
 })
 
-app.listen(port,(err)=>{
+app.listen(3000,(err)=>{
     console.log('Listening on port 3000');
 })
